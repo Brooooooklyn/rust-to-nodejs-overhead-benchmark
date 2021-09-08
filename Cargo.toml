@@ -1,0 +1,10 @@
+[workspace]
+members = [
+  'napi-rs',
+  'napi-rs-compact',
+  'node-bindgen',
+  'neon',
+]
+
+[profile.release]
+lto = true

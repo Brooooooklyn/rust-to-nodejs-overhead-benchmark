@@ -1,0 +1,14 @@
+{
+  "name": "rust-to-nodejs-overhead-benchmark",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Brooooooklyn/rust-to-nodejs-overhead-benchmark.git",
+  "author": "LongYinan <lynweklm@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "benny": "^3.6.15"
+  },
+  "scripts": {
+    "build": "node ./build.js"
+  }
+}

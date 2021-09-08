@@ -1,0 +1,12 @@
+[package]
+edition = "2018"
+name = "neon-example"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies.neon]
+default-features = false
+features = ["napi-6"]
+version = "0.9"
