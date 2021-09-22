@@ -7,8 +7,8 @@ version = "0.1.0"
 crate-type = ["cdylib"]
 
 [dependencies]
-napi = {git = "https://github.com/napi-rs/napi-rs", branch = "napi_bindgen", features = ["latin1", "compat-mode"]}
-napi-derive = {git = "https://github.com/napi-rs/napi-rs", branch = "napi_bindgen", features = ["compat-mode"]}
+napi = {path = "../../napi-rs/crates/napi", features = ["latin1", "compat-mode"]}
+napi-derive = {path = "../../napi-rs/crates/macro", features = ["compat-mode"]}
 
 [build-dependencies]
-napi-build = {git = "https://github.com/napi-rs/napi-rs", branch = "napi_bindgen"}
+napi-build = {path = "../../napi-rs/crates/build"}
