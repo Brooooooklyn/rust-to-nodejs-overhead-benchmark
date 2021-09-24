@@ -562,9 +562,9 @@ dependencies = [
 
 [[package]]
 name = "instant"
-version = "0.1.10"
+version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bee0328b1209d157ef001c94dd85b4f8f64139adb0eac2659f4b08382b2f474d"
+checksum = "716d3d89f35ac6a34fd0eed635395f4c3b76fa889338a4632e5231a8684216bd"
 dependencies = [
  "cfg-if",
  "js-sys",
@@ -676,52 +676,30 @@ checksum = "308cc39be01b73d0d18f82a0e7b2a3df85245f84af96fdddc5d202d27e47b86a"
 
 [[package]]
 name = "napi"
-version = "2.0.0"
+version = "2.0.0-alpha.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "971dbf66e08df6613ed0f37f1334d36f40ba3315b9922ae1ef7f1885d7d10b0a"
 dependencies = [
  "ctor",
  "encoding_rs",
- "napi-sys 1.1.1",
- "winapi",
-]
-
-[[package]]
-name = "napi"
-version = "2.0.0"
-source = "git+https://github.com/napi-rs/napi-rs?branch=napi_bindgen#f38b4be2bce633783897f55ab1a31faca7811256"
-dependencies = [
- "ctor",
- "encoding_rs",
- "napi-sys 1.1.1 (git+https://github.com/napi-rs/napi-rs?branch=napi_bindgen)",
+ "napi-sys",
  "winapi",
 ]
 
 [[package]]
 name = "napi-build"
 version = "1.1.0"
-
-[[package]]
-name = "napi-build"
-version = "1.1.0"
-source = "git+https://github.com/napi-rs/napi-rs?branch=napi_bindgen#f38b4be2bce633783897f55ab1a31faca7811256"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9fbe11972c601a48aa12a0e2aa032e9e251655ce6c6836cac26e5c0b3b5a5dcc"
 
 [[package]]
 name = "napi-derive"
-version = "2.0.0"
+version = "2.0.0-alpha.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e88bb4567a995a72f0c5038cd91e869b2e0529f737d42786bd729d782dd656dd"
 dependencies = [
  "convert_case",
- "napi-derive-backend 0.1.0",
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "napi-derive"
-version = "2.0.0"
-source = "git+https://github.com/napi-rs/napi-rs?branch=napi_bindgen#f38b4be2bce633783897f55ab1a31faca7811256"
-dependencies = [
- "convert_case",
- "napi-derive-backend 0.1.0 (git+https://github.com/napi-rs/napi-rs?branch=napi_bindgen)",
+ "napi-derive-backend",
  "proc-macro2",
  "quote",
  "syn",
@@ -729,22 +707,15 @@ dependencies = [
 
 [[package]]
 name = "napi-derive-backend"
-version = "0.1.0"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fca3b733d756ae951850044c196824f78a18b2211322e4907c69198bb5993708"
 dependencies = [
  "convert_case",
+ "once_cell",
  "proc-macro2",
  "quote",
- "syn",
-]
-
-[[package]]
-name = "napi-derive-backend"
-version = "0.1.0"
-source = "git+https://github.com/napi-rs/napi-rs?branch=napi_bindgen#f38b4be2bce633783897f55ab1a31faca7811256"
-dependencies = [
- "convert_case",
- "proc-macro2",
- "quote",
+ "regex",
  "syn",
 ]
 
@@ -752,28 +723,25 @@ dependencies = [
 name = "napi-rs-compact-example"
 version = "0.1.0"
 dependencies = [
- "napi 2.0.0",
- "napi-build 1.1.0",
- "napi-derive 2.0.0",
+ "napi",
+ "napi-build",
+ "napi-derive",
 ]
 
 [[package]]
 name = "napi-rs-example"
 version = "0.1.0"
 dependencies = [
- "napi 2.0.0 (git+https://github.com/napi-rs/napi-rs?branch=napi_bindgen)",
- "napi-build 1.1.0 (git+https://github.com/napi-rs/napi-rs?branch=napi_bindgen)",
- "napi-derive 2.0.0 (git+https://github.com/napi-rs/napi-rs?branch=napi_bindgen)",
+ "napi",
+ "napi-build",
+ "napi-derive",
 ]
 
 [[package]]
 name = "napi-sys"
 version = "1.1.1"
-
-[[package]]
-name = "napi-sys"
-version = "1.1.1"
-source = "git+https://github.com/napi-rs/napi-rs?branch=napi_bindgen#f38b4be2bce633783897f55ab1a31faca7811256"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "43563506c466587478849d80f46383d859b91bbec586580dadeb3639588f2f7e"
 
 [[package]]
 name = "native-tls"
@@ -1383,9 +1351,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "1.0.76"
+version = "1.0.77"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c6f107db402c2c2055242dbf4d2af0e69197202e9faacbef9571bbe47f5a1b84"
+checksum = "5239bc68e0fef57495900cfea4e8dc75596d9a319d7e16b1e0a440d24e6fe0a0"
 dependencies = [
  "proc-macro2",
  "quote",
