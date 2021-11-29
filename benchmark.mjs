@@ -22,8 +22,17 @@ const {
   helloPlusWorld: nodeBindgenHelloPlusWorld,
 } = require('./node-bindgen.node')
 
+function jsPlus(a, b) {
+  return a + b
+}
+
+function jsHelloPlusWorld(hello) {
+  return `${hello} world`
+}
+
 await b.suite(
   'Sum',
+  b.add('JavaScript', () => jsPlus(1, 2)),
   b.add('napi-rs', () => napiSum(1, 2)),
   b.add('napi-rs-compact', () => napiCompactSum(1, 2)),
   b.add('neon', () => neonSum(1, 2)),
@@ -34,6 +43,7 @@ await b.suite(
 
 await b.suite(
   'Hello Plus World',
+  b.add('JavaScript', () => jsHelloPlusWorld('Hello')),
   b.add('napi-rs', () => napiHelloPlusWorld('Hello')),
   b.add('napi-rs-compact', () => napiCompactHelloPlusWorld('Hello')),
   b.add('neon', () => neonHelloPlusWorld('Hello')),
