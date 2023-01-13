@@ -2,3 +2,5 @@
 *.node
 node_modules
 *.log
+.yarn/cache
+.yarn/install-state.gz

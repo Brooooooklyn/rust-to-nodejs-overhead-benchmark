@@ -10,5 +10,6 @@
   },
   "scripts": {
     "build": "node ./build.js"
-  }
+  },
+  "packageManager": "yarn@3.3.1"
 }

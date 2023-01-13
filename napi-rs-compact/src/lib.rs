@@ -7,6 +7,7 @@ use napi::{CallContext, JsNumber, JsObject, JsString, Result};
 fn init(mut exports: JsObject) -> Result<()> {
   exports.create_named_method("sum", sum)?;
   exports.create_named_method("helloPlusWorld", hello_plus_world)?;
+  exports.create_named_method("area", area)?;
   Ok(())
 }
 
@@ -23,4 +24,17 @@ fn hello_plus_world(ctx: CallContext) -> Result<JsString> {
   ctx
     .env
     .create_string_from_std(hello.as_str()?.to_owned() + " world")
+}
+
+#[js_function(1)]
+fn area(ctx: CallContext) -> Result<JsNumber> {
+  let rect = ctx.get::<JsObject>(0)?;
+
+  let width = rect.get_named_property_unchecked::<JsNumber>("width")?;
+  let w: f64 = width.get_double()?;
+
+  let height = rect.get_named_property_unchecked::<JsNumber>("height")?;
+  let h: f64 = height.get_double()?;
+
+  ctx.env.create_double(w * h)
 }

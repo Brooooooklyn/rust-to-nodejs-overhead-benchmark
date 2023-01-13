@@ -7,7 +7,7 @@ execSync('cargo build --release', {
   stdio: 'inherit',
 })
 
-const libraries = ['napi-rs', 'napi-rs-compact', 'neon', 'node-bindgen']
+const libraries = ['napi-rs', 'napi-rs-compact', 'neon']
 
 const PLATFORM = platform()
 
