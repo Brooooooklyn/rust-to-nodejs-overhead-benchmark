@@ -1,0 +1,13 @@
+[package]
+edition = "2021"
+name = "node-bindgen-example"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+node-bindgen = { version = "5.1" }
+
+[build-dependencies]
+node-bindgen = { version = "5.1", features = ["build"] }

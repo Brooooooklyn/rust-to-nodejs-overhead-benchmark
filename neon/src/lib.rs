@@ -15,10 +15,10 @@ fn area(mut cx: FunctionContext) -> JsResult<JsNumber> {
   let rect: Handle<JsObject> = cx.argument(0)?;
 
   let width: Handle<JsNumber> = rect.get(&mut cx, "width")?;
-  let w: f64 = width.value(&mut cx);
+  let w = width.value(&mut cx) as u32;
 
   let height: Handle<JsNumber> = rect.get(&mut cx, "height")?;
-  let h: f64 = height.value(&mut cx);
+  let h = height.value(&mut cx) as u32;
 
   Ok(cx.number(w * h))
 }

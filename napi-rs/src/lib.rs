@@ -12,11 +12,11 @@ pub fn hello_plus_world(hello: String) -> String {
 
 #[napi(object)]
 pub struct Rect {
-  pub width: f64,
-  pub height: f64,
+  pub width: u32,
+  pub height: u32,
 }
 
 #[napi]
-pub fn area(rect: Rect) -> f64 {
+pub fn area(rect: Rect) -> u32 {
   rect.width * rect.height
 }

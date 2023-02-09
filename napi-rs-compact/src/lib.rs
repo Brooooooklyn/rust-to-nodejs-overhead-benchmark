@@ -31,10 +31,10 @@ fn area(ctx: CallContext) -> Result<JsNumber> {
   let rect = ctx.get::<JsObject>(0)?;
 
   let width = rect.get_named_property_unchecked::<JsNumber>("width")?;
-  let w: f64 = width.get_double()?;
+  let w = width.get_uint32()?;
 
   let height = rect.get_named_property_unchecked::<JsNumber>("height")?;
-  let h: f64 = height.get_double()?;
+  let h = height.get_uint32()?;
 
-  ctx.env.create_double(w * h)
+  ctx.env.create_uint32(w * h)
 }
